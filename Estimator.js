@@ -6,6 +6,7 @@ setminDate();
 function setminDate() {
     let today = new Date().toJSON().substr(0,10);
     document.getElementById("travelDate").setAttribute("min", today);
+    document.getElementById("travelDate").setAttribute("value",today);
 }
 
 /**
@@ -50,7 +51,7 @@ function journeyDetails() {
     //Calling saveDetails function 
     saveDetails(total,km,cab,seniorCitizen,pickup,destination,travelDate,travelTime);
     //Function for redirecting to next page
-    contbtn.addEventListener('click', function () {
+    continuebtn.addEventListener('click', function () {
         window.location.replace('Receipt.html');
     });
 };
